@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+</head>
+<body style="background-color:DodgerBlue">
+<div> 
+  <h1>BMI Calculator</h1>
+  <form class="pure-form", method="POST", action = "/bmi">
+    Weight in kg:
+    <input type="number" name="userweight" > <br>
+    Height in cm:
+    <input type="number" name="userheight" >
+    <button type="submit" class= "pure-button-primary" value="Submit">Calculate BMI</button>
+
+  </form>
+</div>
+  
+<div>
+    {% if height %}
+      <p>Your height is : {{ height }} cm</p>
+      <p>Your weight is: {{ weight }} kg</p>
+      <p>Your BMI is: {{ bmi }} kg/m2</p>
+      {% endif %}
+</div>
+
+  <br>
+  <br>
+  <a href="/"><button>Home</button></a>
+  <a href="/ref"><button>Recommendations</button></a>
+  <a href="/exp"><button>Experience</button></a>
+  <a href="/vol"><button>Volunteer</button></a>
+  <a href="/edu"><button>Education</button></a>
+
+  
+</body>
+</html>
